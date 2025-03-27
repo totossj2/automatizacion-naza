@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir CSV</title>
+</head>
+
+<body>
+    <h1>Subir archivo CSV</h1>
+    <form id="csvForm">
+        <input type="file" id="csvFile" accept=".csv" required />
+        <button type="submit">Procesar CSV</button>
+    </form>
+
+    <script>
+        document.getElementById("csvForm").addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            const fileInput = document.getElementById("csvFile");
+            if (!fileInput.files.length) {
+                alert("Selecciona un archivo CSV.");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append("archivoCSV", fileInput.files[0]);
+
+            try {
+                const response = await fetch("/api/process-csv", {
+                    method: "POST",
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error("Error al procesar el archivo");
+                }
+
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = "reporte-filtrado.csv";
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+            } catch (error) {
+                console.error(error);
+                alert("Hubo un problema al procesar el CSV.");
+            }
+        });
+    </script>
+</body>
+
+</html>
