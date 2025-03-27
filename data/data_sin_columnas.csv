@@ -1,0 +1,15 @@
+id,name,type,sent,unique open,unique click,spam report,bounce,unsubscribe,tickets,revenue,sent at
+284773,Bienvenida_Step1,customer-created,34,9,0,0,0,0,1,145530,2025-02-27
+284773,Bienvenida_Step1,customer-created,36,10,2,0,0,0,0,0,2025-02-28
+284778,Bienvenida_Step2,customer-created,37,5,2,0,0,0,0,0,2025-02-28
+284778,Bienvenida_Step2,customer-created,47,6,0,0,1,0,0,0,2025-02-27
+284779,Carrito Abandonado 1,abandoned-cart,31,6,0,0,0,0,1,401850,2025-02-28
+284779,Carrito Abandonado 1,abandoned-cart,32,3,0,0,0,0,0,0,2025-02-27
+284882,Carrito Abandonado 2,abandoned-cart,32,6,0,0,0,0,1,59388,2025-02-27
+284882,Carrito Abandonado 2,abandoned-cart,37,7,1,0,0,0,0,0,2025-02-28
+284886,Crosseling,last-purchase,134,35,3,1,1,1,1,84550,2025-02-27
+284886,Crosseling,last-purchase,109,29,3,0,0,0,0,0,2025-02-28
+285012,Remarketing de visitas,browser-abandonment-product,2,1,0,0,0,0,0,0,2025-02-28
+285012,Remarketing de visitas,browser-abandonment-product,2,2,1,0,0,0,0,0,2025-02-27
+285074,Win back 1,risky-customers,19,4,0,0,0,0,0,0,2025-02-28
+285074,Win back 1,risky-customers,30,6,0,0,0,0,0,0,2025-02-27
